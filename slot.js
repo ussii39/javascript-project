@@ -1,5 +1,26 @@
 const test = document.querySelector(".test");
 const btn = document.querySelector(".btn");
+
+document.addEventListener('DOMContentLoaded', function () {
+  const ta = new TextAnimation(".animation-title")
+  setTimeout(() => {
+    ta.method();
+  }, 1000)
+})
+
+class TextAnimation {
+  constructor(el) {
+    this.el = document.querySelector(el);
+  }
+  method() {
+    console.log("メソッドが正常に動作しています")
+    this.el.classList.toggle("inview")
+  }
+
+}
+
+
+
 btn.addEventListener("click", () => {
   test.classList.toggle("test2");
   //   if (test.classList.contains("test2")) {
@@ -30,3 +51,4 @@ target.addEventListener("click", sample());
 //<button id='start-button'></button>が表示される
 
 target.addEventListener("click", { name: userName, handleEvent: sayHello });
+

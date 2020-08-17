@@ -60,6 +60,9 @@
 .btn {
   background-color: blue;
 }
+.inview{
+font-size: 100px;    
+}
 
 @keyframes myanimation {
   0% {
